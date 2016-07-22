@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="洪样">
+        <title>书页</title>
+        <style>
+            body{
+                perspective: 800px;
+                height: 1000px;
+                /*transition: 3s;*/
+            }
+            /*body:hover{
+                transform: rotateX(160deg);
+            }*/
+            div{
+                position: absolute;
+                top: 200px;
+                left: 800px;
+                height: 500px;
+                width: 300px;
+                transform-origin: 0 0;
+                /*transform-style: preserve-3d;*/
+            }
+            div:nth-child(1){
+                background-color: pink;
+                transform: rotateY(-10deg);
+            }
+            div:nth-child(2){
+                background-color: blue;
+                transform: rotateY(-17deg);
+            }
+            div:nth-child(3){
+                background-color: green;
+                transform: rotateY(-24deg);
+            }
+            div:nth-child(4){
+                background-color: yellow;
+                transform: rotateY(-31deg);
+                transform-style: preserve-3d;
+            }
+            div:nth-child(5){
+                background-color: red;
+                transform: rotateY(-38deg);
+                transition: 2s;
+                 /*transform-style: preserve-3d;*/
+            }
+            div:nth-child(5):active{
+                
+                transform: rotateY(-120deg);
+            }
+            
+            
+            
+            article{
+                margin: 40px auto;
+                /*perspective:1000px;
+                perspective-origin: 500px 500px;*/
+                transform-style: preserve-3d;
+                transform-origin:  calc(50%) calc(50%);
+                animation: rotate;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                height: 100%;
+                animation-timing-function: linear;
+                
+                
+                
+            }
+            @keyframes rotate{
+                form{
+                    transform: rotate3d(0,0,0,90deg);
+                }
+                to{
+                   transform: rotate3d(1,1,1,360deg);
+                }
+            }
+            section{
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: calc(50% - 50px);
+                left: calc(50% - 50px);
+                /*transform-style: preserve-3d;*/
+                background-color: red;
+                
+               
+                
+               
+            }
+            section:nth-of-type(1){
+                background-image: url(1.jpg);
+                background-size: 100% 100%;
+                animation: rotate1;
+                animation-duration: 1s;
+              transform: translate3d(0,0,100px);
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                /*animation-delay: 1s;*/
+                 
+             }
+              /*@keyframes rotate1{
+                form{
+                    transform: translate3d(0,0,100px);
+                }
+                50%{
+                   transform: translate3d(256px,0,360px) rotate3d(0,1,2,90deg);
+                }
+                80%{
+                    transform: translate3d(0,0,100px);
+                }
+                to{
+                    transform: translate3d(0,0,100px);
+                }
+            }*/
+            section:nth-of-type(2){
+                background-image: url(2.jpg);
+                background-size: 100% 100%;
+                transform: translate3d(0,0,-100px);
+                animation: rotate2;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                /*animation-delay: 1s;*/
+            }
+            /*@keyframes rotate2{
+                form{
+                    transform: translate3d(0,0,-100px);
+                }
+                50%{
+                    transform: translate3d(256px,452px,430px) rotate3d(2,1,2,450deg);
+                }
+                80%{
+                    transform:  translate3d(0,0,-100px);
+                }
+                
+                to{
+                   transform: translate3d(0,0,-100px);
+                }
+            }*/
+            section:nth-of-type(3){
+                background-image: url(3.jpg);
+                background-size: 100% 100%;
+                animation: rotate3;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                 transform: translate3d(0,100px,0) rotate3d(1,0,0,90deg);
+                /*animation-delay: 2s;*/
+            }
+             /*@keyframes rotate3{
+                form{
+                    transform: translate3d(0,100px,0) rotate3d(1,0,0,90deg);
+                }
+                50%{
+                    transform: translate3d(160px,320px,0) rotate3d(1,5,3,250deg)
+                }
+                80%{
+                    transform: translate3d(0,100px,0) rotate3d(1,0,0,90deg);
+                }
+                to{
+                   transform: translate3d(0,100px,0) rotate3d(1,0,0,90deg);
+                }
+            }*/
+            section:nth-of-type(4){
+                background-image: url(4.jpg);
+                background-size: 100% 100%;
+                animation: rotate4;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                 transform: translate3d(0,-100px,0) rotate3d(1,0,0,-90deg);
+                /*animation-delay: 3s;*/
+            }
+             /*@keyframes rotate4{
+                form{
+                    transform: translate3d(0,-100px,0) rotate3d(1,0,0,-90deg);
+                }
+                50%{
+                    transform: translate3d(450px,-250px,0) rotate3d(1,3,2,-410deg);
+                }
+                80%{
+                    transform: translate3d(0,-100px,0) rotate3d(1,0,0,-90deg);
+                }
+                to{
+                   transform: translate3d(0,-100px,0) rotate3d(1,0,0,-90deg);
+                }
+            }*/
+            section:nth-of-type(5){
+                background-image: url(5.jpg);
+                background-size: 100% 100%;
+                animation: rotate5;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                 transform: translate3d(100px,0,0) rotate3d(0,1,0,90deg);
+                /*animation-delay: 4s;*/
+            }
+             /*@keyframes rotate5{
+                form{
+                    transform: translate3d(100px,0,0) rotate3d(0,1,0,90deg);
+                }
+                50%{
+                    transform: translate3d(400px,520px,300px) rotate3d(0,1,5,360deg)
+                }
+                 80%{
+                   transform: translate3d(100px,0,0) rotate3d(0,1,0,90deg);
+                }
+                to{
+                   transform: translate3d(100px,0,0) rotate3d(0,1,0,90deg);
+                }
+            }*/
+            section:nth-of-type(6){
+                background-image: url(6.jpg);
+                background-size: 100% 100%;
+                animation: rotate6;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+                transform: translate3d(-100px,0,0) rotate3d(0,1,0,-90deg); 
+                /*animation-delay: 5s;*/
+            }
+            /*@keyframes rotate6{
+                form{
+                    transform: translate3d(-100px,0,0) rotate3d(0,1,0,-90deg);
+                }
+                50%{
+                    transform: translate3d(-300px,250px,65px) rotate3d(2,1,3,-350deg);
+                }
+                80%{
+                   transform: translate3d(-100px,0,0) rotate3d(0,1,0,-90deg);
+                }
+                to{
+                   transform: translate3d(-100px,0,0) rotate3d(0,1,0,-90deg);
+                }
+            }*/
+            
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>   
+           </div>
+        <div>
+       <article>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      <section></section>
+      </article>     
+        </div>
+    </body>
+</html>
